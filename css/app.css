@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.board-container{
+  width: fit-content;
+  margin: auto
+}
+
+button{
+  font-size: 24px;
+  margin: 20px;
+  padding: 10px;
+  background-color: rgb(255, 213, 0);
+}
+
+.hide{
+  display: none;
+}
+/* .formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+} */
