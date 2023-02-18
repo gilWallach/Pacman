@@ -20,6 +20,7 @@ function createGhost(board) {
 
 function createGhosts(board) {
     gGhosts = []
+    gDeadGhosts= []
 
         for (var i = 0; i < 3; i++) {
             createGhost(board)
@@ -30,12 +31,12 @@ function createGhosts(board) {
 function moveGhosts() {
     for (var i = 0; i < gGhosts.length; i++) {
         const ghost = gGhosts[i]
-        moveGhost(ghost)
+        moveGhost(ghost, i)
     }
 }
 
-function moveGhost(ghost) {
-    const moveDiff = getMoveDiff();
+function moveGhost(ghost, i) {
+    const moveDiff = getMoveDiff()
     const nextLocation = {
         i: ghost.location.i + moveDiff.i,
         j: ghost.location.j + moveDiff.j
@@ -47,7 +48,7 @@ function moveGhost(ghost) {
     if (nextCell === SUPER_FOOD) return
     if (nextCell === PACMAN) {
         if(gPacman.isSuper) {
-            gDeadGhosts.push(gGhosts.slice(ghost))
+            gDeadGhosts.push(...gGhosts.slice(i, 1))
             return
         }
         else{

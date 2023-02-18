@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="pacman icon" href="./favicon/Pacman.svg" />
     <title>pacman</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body onload="init()" onkeyup="movePacman(event)">
-
     <h2>Score: <span>0</span></h2>
     <div class="board-container"></div>
+    <button onclick="init()">Play Again</button>
     <div class="modal hide">
-        <button onclick="init()">Play Again</button>
         <h2></h2>
     </div>
-    
     
     <script src="js/utils.js"></script>
     <script src="js/game.js"></script>
