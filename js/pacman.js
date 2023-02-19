@@ -1,6 +1,6 @@
 "use strict"
 
-const PACMAN = "../favicon/pacman.svg"
+const PACMAN = "https://raw.githubusercontent.com/gilWallach/Pacman/main/favicon/Pacman.svg"
 var gPacman
 var gDirection = 0
 
